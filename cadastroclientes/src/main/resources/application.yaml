@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: cadastroclientes
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cadastroclientes
+    username: postgres
+    password: 86065542
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      # Use 'update' para manter os dados ou 'create-drop' para limpar sempre que reiniciar
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true # Melhora a leitura dos logs SQL no console
+
+api:
+  security:
+    token:
+      secret: minha_senha_super_secreta_do_allan_123456
